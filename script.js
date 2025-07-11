@@ -18,7 +18,7 @@ let humanChoice = getHumanChoice();
 
 function getHumanChoice () {
     const userInput = prompt("Enter your choice: ");
-    return userInput;
+    return userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
 }
 
 let computerScore = 0;
