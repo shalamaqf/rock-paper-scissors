@@ -18,4 +18,5 @@ let humanChoice = getHumanChoice();
 
 function getHumanChoice () {
     const userInput = prompt("Enter your choice: ");
+    return userInput;
 }
