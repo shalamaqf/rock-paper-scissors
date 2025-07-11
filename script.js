@@ -13,3 +13,5 @@ function getComputerChoice(){
         return "Scissors";
     }
 }
+
+let humanChoice = getHumanChoice();
