@@ -1,4 +1,4 @@
-let computerChoice = getComputerChoice();
+let computerChoice = getComputerChoice;
 
 function getComputerChoice(){
     const randomNumber = Math.floor(Math.random() * 3);
@@ -25,5 +25,43 @@ let computerScore = 0;
 let humanScore = 0;
 
 function playRound(computerChoice, humanChoice) {
-
+    if (humanChoice == 'Rock'){
+        if (computerChoice == 'Paper'){
+            computerScore++;
+            return "You lose! Paper beats Rock.";
+        }
+        else if (computerChoice == 'Scissors'){
+            humanScore++;
+            return "You win! Rock beats Scissors.";
+        }
+        else{
+            return "Tie! Both choose Rock.";
+        }
+    }
+    else if (humanChoice == 'Paper'){
+        if (computerChoice == 'Rock'){
+            humanScore++;
+            return "You win! Paper beats Rock.";
+        }
+        else if (computerChoice == 'Scissors'){
+            computerScore++;
+            return "You lose! Scissors beats Paper.";
+        }
+        else{
+            return "Tie! Both choose Paper.";
+        }
+    }
+    else{
+        if (computerChoice == 'Rock'){
+            computerScore++;
+            return "You lose! Rock beats Scissors.";
+        }
+        else if (computerChoice == 'Paper'){
+            humanScore++;
+            return "You win! Scissors beats Paper.";
+        }
+        else{
+            return "Tie! Both choose Scissors.";
+        }
+    }
 }
