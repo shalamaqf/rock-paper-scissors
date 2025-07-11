@@ -1,4 +1,4 @@
-let computerChoice = getComputerChoice;
+let computerSelection = getComputerChoice();
 
 function getComputerChoice(){
     const randomNumber = Math.floor(Math.random() * 3);
@@ -14,7 +14,7 @@ function getComputerChoice(){
     }
 }
 
-let humanChoice = getHumanChoice();
+let humanSelection = getHumanChoice();
 
 function getHumanChoice () {
     const userInput = prompt("Enter your choice: ");
