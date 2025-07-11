@@ -20,3 +20,5 @@ function getHumanChoice () {
     const userInput = prompt("Enter your choice: ");
     return userInput;
 }
+
+let computerScore = 0;
