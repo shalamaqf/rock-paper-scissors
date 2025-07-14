@@ -90,3 +90,5 @@ function playGame(){
     console.log(compareScore(computerScore, humanScore));
 
 }
+
+console.log(playGame());
