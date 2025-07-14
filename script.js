@@ -73,4 +73,8 @@ function playGame(){
         console.log(humanSelection);
         console.log(playRound(computerSelection, humanSelection));
     }
+
+    console.log("Opponent Score: ", computerScore);
+    console.log("Your Score: ", humanScore);
+
 }
