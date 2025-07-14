@@ -34,7 +34,7 @@ function getComputerChoice(){
     Return the userInput */
 
 function getHumanChoice () {
-    const userInput = prompt("Enter your choice: ");
+    const userInput = prompt("Enter your choice (Rock, Paper, or Scissors): ");
     return userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
 }
 
