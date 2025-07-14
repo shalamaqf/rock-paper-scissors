@@ -87,4 +87,6 @@ function playGame(){
     console.log("Opponent Score: ", computerScore);
     console.log("Your Score: ", humanScore);
 
+    console.log(compareScore(computerScore, humanScore));
+
 }
