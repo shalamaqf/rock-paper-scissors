@@ -65,6 +65,10 @@ function playRound(computerChoice, humanChoice) {
 
 }
 
+function compareScore(computerScore, humanScore){
+
+}
+
 function playGame(){
     for (let i = 1; i <= 5; i++){
         computerSelection = getComputerChoice();
@@ -76,5 +80,5 @@ function playGame(){
 
     console.log("Opponent Score: ", computerScore);
     console.log("Your Score: ", humanScore);
-
+    
 }
