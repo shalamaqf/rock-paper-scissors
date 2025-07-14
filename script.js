@@ -62,10 +62,15 @@ function playRound(computerChoice, humanChoice) {
             return "Tie! Both choose Scissors.";
         }
     }
+
 }
 
 function playGame(){
     for (let i = 1; i <= 5; i++){
-
+        computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        humanSelection = getHumanChoice();
+        console.log(humanSelection);
+        console.log(playRound(computerSelection, humanSelection));
     }
 }
