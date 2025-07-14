@@ -65,3 +65,8 @@ function playRound(computerChoice, humanChoice) {
         }
     }
 }
+
+
+function playGame(){
+    
+}
