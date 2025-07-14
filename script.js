@@ -1,4 +1,7 @@
-let computerSelection = getComputerChoice();
+let computerSelection;
+let humanSelection;
+let computerScore = 0;
+let humanScore = 0;
 
 function getComputerChoice(){
     const randomNumber = Math.floor(Math.random() * 3);
@@ -14,15 +17,10 @@ function getComputerChoice(){
     }
 }
 
-let humanSelection = getHumanChoice();
-
 function getHumanChoice () {
     const userInput = prompt("Enter your choice: ");
     return userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
 }
-
-let computerScore = 0;
-let humanScore = 0;
 
 function playRound(computerChoice, humanChoice) {
     if (humanChoice == 'Rock'){
@@ -65,7 +63,6 @@ function playRound(computerChoice, humanChoice) {
         }
     }
 }
-
 
 function playGame(){
     
