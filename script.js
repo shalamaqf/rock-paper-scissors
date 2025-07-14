@@ -96,9 +96,12 @@ function compareScore(computerScore, humanScore){
     if (computerScore > humanScore){
         return "You lose the game! Try next time :(";
     }
+    else if (compareScore < humanScore) {
+        return "Congrats! You win the game :D";
+    }
     else
     {
-        return "Congrats! You win the game :D";
+        return "Both tie! No one winning the game . . .";
     }
 }
 
@@ -110,7 +113,7 @@ function compareScore(computerScore, humanScore){
     Call playRound function inside the loop
     After loop, print out the computer and human score
     Call the compareScore function to tells who's win the entire game */
-    
+
 function playGame(){
     for (let i = 1; i <= 5; i++){
         computerSelection = getComputerChoice();
