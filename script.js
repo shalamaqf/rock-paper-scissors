@@ -66,7 +66,13 @@ function playRound(computerChoice, humanChoice) {
 }
 
 function compareScore(computerScore, humanScore){
-
+    if (computerScore > humanScore){
+        return "You lose the game! Try next time :(";
+    }
+    else
+    {
+        return "Congrats! You win the game :D";
+    }
 }
 
 function playGame(){
@@ -80,5 +86,5 @@ function playGame(){
 
     console.log("Opponent Score: ", computerScore);
     console.log("Your Score: ", humanScore);
-    
+
 }
