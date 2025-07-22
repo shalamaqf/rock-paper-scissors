@@ -123,5 +123,3 @@ buttonsContainer.appendChild(paper);
 buttonsContainer.appendChild(scissors);
 
 
-const buttons = document.querySelectorAll("button");
-
