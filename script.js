@@ -114,7 +114,7 @@ function compareScore(computerScore, humanScore){
     After loop, print out the computer and human score
     Call the compareScore function to tells who's win the entire game */
 
-function playGame(){
+/* function playGame(){
     for (let i = 1; i <= 5; i++){
         computerSelection = getComputerChoice();
         console.log(computerSelection);
@@ -128,10 +128,16 @@ function playGame(){
 
     console.log(compareScore(computerScore, humanScore));
 
-}
+} */
 
 
 
 /* Call playGame function to play the entire game */
 
 playGame();
+
+////////////////  USER INTERFACE  //////////////////
+
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
