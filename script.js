@@ -117,9 +117,9 @@ function compareScore(computerScore, humanScore){
 function playGame(){
     for (let i = 1; i <= 5; i++){
         computerSelection = getComputerChoice();
-        console.log(computerSelection);
+        console.log("Computer choose " + computerSelection);
         humanSelection = getHumanChoice();
-        console.log(humanSelection);
+        console.log("You choose " + humanSelection);
         console.log(playRound(computerSelection, humanSelection));
     }
 
