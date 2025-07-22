@@ -129,3 +129,6 @@ buttonsContainer.appendChild(scissors);
 /* create a div element to show the result */
 const resultDiv = document.createElement("div")
 resultDiv.setAttribute("id", "result");
+
+/* append the div element to the body */
+document.body.appendChild(resultDiv);
