@@ -134,4 +134,4 @@ function playGame(){
 
 /* Call playGame function to play the entire game */
 
-console.log(playGame());
+playGame();
