@@ -126,4 +126,6 @@ buttonsContainer.appendChild(rock);
 buttonsContainer.appendChild(paper);
 buttonsContainer.appendChild(scissors);
 
-
+/* create a div element to show the result */
+const resultDiv = document.createElement("div")
+resultDiv.setAttribute("id", "result");
