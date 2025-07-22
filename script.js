@@ -96,7 +96,7 @@ function compareScore(computerScore, humanScore){
     if (computerScore > humanScore){
         return "You lose the game! Try next time :(";
     }
-    else if (compareScore < humanScore) {
+    else if (computerScore < humanScore) {
         return "Congrats! You win the game :D";
     }
     else
