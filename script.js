@@ -115,5 +115,7 @@ rock.textContent = "Rock";
 paper.textContent = "Paper";
 scissors.textContent = "Scissors";
 
+const buttonsContainer = document.createElement("div");
+
 const buttons = document.querySelectorAll("button");
 
