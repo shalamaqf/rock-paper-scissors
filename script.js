@@ -107,17 +107,21 @@ function compareScore(computerScore, humanScore){
 
 ////////////////  USER INTERFACE  //////////////////
 
+/* create three buttons element */
 const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
+/* add text to the button */
 rock.textContent = "Rock";
 paper.textContent = "Paper";
 scissors.textContent = "Scissors";
 
+/* create a div element to wrap all buttons */
 const buttonsContainer = document.createElement("div");
 document.body.appendChild(buttonsContainer);
 
+/* add all buttons to the div element */
 buttonsContainer.appendChild(rock);
 buttonsContainer.appendChild(paper);
 buttonsContainer.appendChild(scissors);
