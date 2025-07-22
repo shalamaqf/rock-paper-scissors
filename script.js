@@ -141,3 +141,5 @@ playGame();
 const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
+
+const buttons = document.querySelectorAll("button");
