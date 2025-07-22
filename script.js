@@ -105,37 +105,6 @@ function compareScore(computerScore, humanScore){
     }
 }
 
-
-
-/*  Decalre playGame function to play the entire game by call playRound 5 times
-    Create a for loop to call playRound function 5 times
-    Declare computerSelection and humanSelection variable inside the for loop
-    Call playRound function inside the loop
-    After loop, print out the computer and human score
-    Call the compareScore function to tells who's win the entire game */
-
-/* function playGame(){
-    for (let i = 1; i <= 5; i++){
-        computerSelection = getComputerChoice();
-        console.log(computerSelection);
-        humanSelection = getHumanChoice();
-        console.log(humanSelection);
-        console.log(playRound(computerSelection, humanSelection));
-    }
-
-    console.log("Opponent Score: ", computerScore);
-    console.log("Your Score: ", humanScore);
-
-    console.log(compareScore(computerScore, humanScore));
-
-} */
-
-
-
-/* Call playGame function to play the entire game */
-
-playGame();
-
 ////////////////  USER INTERFACE  //////////////////
 
 const rock = document.createElement("button");
@@ -143,3 +112,4 @@ const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
 const buttons = document.querySelectorAll("button");
+
