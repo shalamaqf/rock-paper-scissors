@@ -135,13 +135,13 @@ document.body.appendChild(resultDiv);
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
-    resultDiv.textContent = "Your choice: Rock";
+    
 });
 
 paper.addEventListener('click', () => {
-    resultDiv.textContent = "Your choice: Paper";
+
 });
 
 scissors.addEventListener('click', () => {
-    resultDiv.textContent = "Your choice: Scissors";
+    
 });
