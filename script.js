@@ -199,3 +199,8 @@ document.body.appendChild(showRound);
 let showPlayerScore = document.createElement("div");
 showPlayerScore.setAttribute("id", "playerScore");
 document.body.appendChild(showPlayerScore);
+
+/* create a div element to show computer score */
+let showComputerScore = document.createElement("div");
+showComputerScore.setAttribute("id", "computerScore");
+document.body.appendChild(showComputerScore);
