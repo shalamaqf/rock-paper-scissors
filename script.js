@@ -194,3 +194,8 @@ let roundCount = 1;
 let showRound = document.createElement("div");
 showRound.setAttribute("id", "round");
 document.body.appendChild(showRound);
+
+/* create a div element to show player score */
+let showPlayerScore = document.createElement("div");
+showPlayerScore.setAttribute("id", "playerScore");
+document.body.appendChild(showPlayerScore);
