@@ -145,7 +145,9 @@ document.body.appendChild(computerChoiceDiv);
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
-    
+    /* show human choice */
+    humanSelection = rock.textContent;
+    playerChoiceDiv.textContent = "You choose: " + rock.textContent;
 });
 
 paper.addEventListener('click', () => {
