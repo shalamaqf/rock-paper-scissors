@@ -153,7 +153,7 @@ document.body.appendChild(resultDiv);
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
-   
+    
 });
 
 
@@ -167,7 +167,7 @@ scissors.addEventListener('click', () => {
 });
 
 /* create a variable to keep in track the round */
-let roundCount = 1;
+let roundCount = 0;
 
 /* create a div element to show the round */
 let showRound = document.createElement("div");
