@@ -112,36 +112,44 @@ const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
+
 /* add text to the button */
 rock.textContent = "Rock";
 paper.textContent = "Paper";
 scissors.textContent = "Scissors";
 
+
 /* create a div element to wrap all buttons */
 const buttonsContainer = document.createElement("div");
 document.body.appendChild(buttonsContainer);
+
 
 /* add all buttons to the div element */
 buttonsContainer.appendChild(rock);
 buttonsContainer.appendChild(paper);
 buttonsContainer.appendChild(scissors);
 
+
 /* create a div element to show the result */
 const resultDiv = document.createElement("div")
 resultDiv.setAttribute("id", "result");
+
 
 /* create a div element to show the player choice */
 const playerChoiceDiv = document.createElement("div");
 playerChoiceDiv.setAttribute("id", "playerChoice");
 
+
 /* create a div element to show the computer choice */
 const computerChoiceDiv = document.createElement("div");
 computerChoiceDiv.setAttribute("id", "computerChoice");
+
 
 /* append the div element to the body */
 document.body.appendChild(playerChoiceDiv);
 document.body.appendChild(computerChoiceDiv);
 document.body.appendChild(resultDiv);
+
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
@@ -157,6 +165,7 @@ rock.addEventListener('click', () => {
     resultDiv.textContent = playRound(computerSelection, humanSelection);
 });
 
+
 paper.addEventListener('click', () => {
     humanSelection = paper.textContent;
     playerChoiceDiv.textContent = "You choose: " + paper.textContent;
@@ -167,6 +176,7 @@ paper.addEventListener('click', () => {
     resultDiv.textContent = playRound(computerSelection, humanSelection);
 });
 
+
 scissors.addEventListener('click', () => {
     humanSelection = scissors.textContent;
     playerChoiceDiv.textContent = "You choose: " + scissors.textContent;
@@ -176,3 +186,6 @@ scissors.addEventListener('click', () => {
 
     resultDiv.textContent = playRound(computerSelection, humanSelection);
 });
+
+/* create a variable to keep in track the round */
+let roundCount = 1;
