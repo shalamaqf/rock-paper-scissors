@@ -168,5 +168,11 @@ paper.addEventListener('click', () => {
 });
 
 scissors.addEventListener('click', () => {
-    
+    humanSelection = scissors.textContent;
+    playerChoiceDiv.textContent = "You choose: " + scissors.textContent;
+
+    computerSelection = getComputerChoice();
+    computerChoiceDiv.textContent = "Computer choose: " + computerSelection;
+
+    resultDiv.textContent = playRound(computerSelection, humanSelection);
 });
