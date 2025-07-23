@@ -153,48 +153,17 @@ document.body.appendChild(resultDiv);
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
-    /* show human choice */
-    humanSelection = rock.textContent;
-    playerChoiceDiv.textContent = "You choose: " + rock.textContent;
-
-    /* show computer choice */
-    computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
-
-    /* play the game one round */
-    resultDiv.textContent = playRound(computerSelection, humanSelection);
-
-    /* show the score */
-    showPlayerScore.textContent = "Your Score: " + humanScore;
-    showComputerScore.textContent = "Opponent Score: " + computerScore;
+   
 });
 
 
 paper.addEventListener('click', () => {
-    humanSelection = paper.textContent;
-    playerChoiceDiv.textContent = "You choose: " + paper.textContent;
-
-    computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
-
-    resultDiv.textContent = playRound(computerSelection, humanSelection);
-
-    showPlayerScore.textContent = "Your Score: " + humanScore;
-    showComputerScore.textContent = "Opponent Score: " + computerScore;
+   
 });
 
 
 scissors.addEventListener('click', () => {
-    humanSelection = scissors.textContent;
-    playerChoiceDiv.textContent = "You choose: " + scissors.textContent;
-
-    computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
-
-    resultDiv.textContent = playRound(computerSelection, humanSelection);
-
-    showPlayerScore.textContent = "Your Score: " + humanScore;
-    showComputerScore.textContent = "Opponent Score: " + computerScore;
+   
 });
 
 /* create a variable to keep in track the round */
@@ -232,4 +201,25 @@ function handleGameOver(){
     else{
         showRound.textContent = "Round: " + roundCount;
     }
+}
+
+/* create a function to handle one round */
+function playRoundHandler(playerChoice){
+     /* show human choice */
+    humanSelection = playerChoice;
+    playerChoiceDiv.textContent = "You choose: " + playerChoice;
+
+    /* show computer choice */
+    computerSelection = getComputerChoice();
+    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
+
+    /* play the game one round */
+    resultDiv.textContent = playRound(computerSelection, humanSelection);
+
+    /* show the score */
+    showPlayerScore.textContent = "Your Score: " + humanScore;
+    showComputerScore.textContent = "Opponent Score: " + computerScore;
+
+    /* update the round*/
+    roundCount++;
 }
