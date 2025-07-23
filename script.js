@@ -105,33 +105,118 @@ function compareScore(computerScore, humanScore){
     }
 }
 
+///////////////////////////////////  USER INTERFACE  ///////////////////////////////////////////////
+
+// Create buttons for player choices: Rock, Paper, or Scissors 
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
 
 
-/*  Decalre playGame function to play the entire game by call playRound 5 times
-    Create a for loop to call playRound function 5 times
-    Declare computerSelection and humanSelection variable inside the for loop
-    Call playRound function inside the loop
-    After loop, print out the computer and human score
-    Call the compareScore function to tells who's win the entire game */
+// Add text labels to the buttons
+rock.textContent = "Rock";
+paper.textContent = "Paper";
+scissors.textContent = "Scissors";
 
-function playGame(){
-    for (let i = 1; i <= 5; i++){
-        computerSelection = getComputerChoice();
-        console.log("Computer choose " + computerSelection);
-        humanSelection = getHumanChoice();
-        console.log("You choose " + humanSelection);
-        console.log(playRound(computerSelection, humanSelection));
+
+// Create a container to wrap the buttons and add it to the DOM
+const buttonsContainer = document.createElement("div");
+document.body.appendChild(buttonsContainer);
+
+
+// Append buttons to the container div 
+buttonsContainer.appendChild(rock);
+buttonsContainer.appendChild(paper);
+buttonsContainer.appendChild(scissors);
+
+
+// Create divs to display game information
+const playerChoiceDiv = document.createElement("div");
+playerChoiceDiv.setAttribute("id", "playerChoice");
+
+const computerChoiceDiv = document.createElement("div");
+computerChoiceDiv.setAttribute("id", "computerChoice");
+
+const resultDiv = document.createElement("div")
+resultDiv.setAttribute("id", "result");
+
+
+// Create divs to show current round and scores
+let roundCount = 0;
+
+let showRound = document.createElement("div");
+showRound.setAttribute("id", "round");
+
+let showPlayerScore = document.createElement("div");
+showPlayerScore.setAttribute("id", "playerScore");
+
+let showComputerScore = document.createElement("div");
+showComputerScore.setAttribute("id", "computerScore");
+
+
+// Div to show the final result when game ends
+const finalResult = document.createElement("div");
+finalResult.setAttribute("id", "finalResult");
+
+
+// Append divs to DOM
+document.body.appendChild(showRound);
+document.body.appendChild(playerChoiceDiv);
+document.body.appendChild(computerChoiceDiv);
+document.body.appendChild(resultDiv);
+document.body.appendChild(showPlayerScore);
+document.body.appendChild(showComputerScore);
+document.body.appendChild(finalResult);
+
+
+/* Update round display, disable buttons, and shows final game result
+   when 5 rounds have been played. */
+function handleGameOver(){
+    if (roundCount >= 5){
+        showRound.textContent = "Round: 5 (Last Round)";
+        finalResult.textContent = compareScore(computerScore, humanScore);
+        rock.disabled = true;
+        paper.disabled = true;
+        scissors.disabled = true;
     }
-
-    console.log("Opponent Score: ", computerScore);
-    console.log("Your Score: ", humanScore);
-
-    console.log(compareScore(computerScore, humanScore));
-
+    else{
+        showRound.textContent = "Round: " + roundCount;
+    }
 }
 
 
+/* Handles a single round of the game:
+   - Update player's and computer's choices on UI
+   - Runs the game logic for the round
+   - Update scores and round count */
+function playRoundHandler(playerChoice){
+    humanSelection = playerChoice;
+    playerChoiceDiv.textContent = "You choose: " + playerChoice;
 
-/* Call playGame function to play the entire game */
+    computerSelection = getComputerChoice();
+    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
 
-playGame();
+    resultDiv.textContent = playRound(computerSelection, humanSelection);
+
+    showPlayerScore.textContent = "Your Score: " + humanScore;
+    showComputerScore.textContent = "Opponent Score: " + computerScore;
+
+    roundCount++;
+}
+
+
+// Attach event listeners to buttons and handle one round of the game
+rock.addEventListener('click', () => {
+    playRoundHandler(rock.textContent);
+    handleGameOver();
+});
+
+paper.addEventListener('click', () => {
+    playRoundHandler(paper.textContent);
+    handleGameOver();
+});
+
+scissors.addEventListener('click', () => {
+    playRoundHandler(scissors.textContent);
+    handleGameOver();
+});
