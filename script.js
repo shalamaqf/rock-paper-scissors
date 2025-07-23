@@ -159,10 +159,14 @@ rock.addEventListener('click', () => {
 
     /* show computer choice */
     computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Computer choose: " + computerSelection;
+    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
 
     /* play the game one round */
     resultDiv.textContent = playRound(computerSelection, humanSelection);
+
+    /* show the score */
+    showPlayerScore.textContent = "Your Score: " + humanScore;
+    showComputerScore.textContent = "Opponent Score: " + computerScore;
 });
 
 
@@ -171,9 +175,12 @@ paper.addEventListener('click', () => {
     playerChoiceDiv.textContent = "You choose: " + paper.textContent;
 
     computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Computer choose: " + computerSelection;
+    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
 
     resultDiv.textContent = playRound(computerSelection, humanSelection);
+
+    showPlayerScore.textContent = "Your Score: " + humanScore;
+    showComputerScore.textContent = "Opponent Score: " + computerScore;
 });
 
 
@@ -182,9 +189,12 @@ scissors.addEventListener('click', () => {
     playerChoiceDiv.textContent = "You choose: " + scissors.textContent;
 
     computerSelection = getComputerChoice();
-    computerChoiceDiv.textContent = "Computer choose: " + computerSelection;
+    computerChoiceDiv.textContent = "Opponent choose: " + computerSelection;
 
     resultDiv.textContent = playRound(computerSelection, humanSelection);
+
+    showPlayerScore.textContent = "Your Score: " + humanScore;
+    showComputerScore.textContent = "Opponent Score: " + computerScore;
 });
 
 /* create a variable to keep in track the round */
@@ -204,3 +214,4 @@ document.body.appendChild(showPlayerScore);
 let showComputerScore = document.createElement("div");
 showComputerScore.setAttribute("id", "computerScore");
 document.body.appendChild(showComputerScore);
+
