@@ -169,7 +169,6 @@ document.body.appendChild(showComputerScore);
 document.body.appendChild(finalResult);
 
 
-
 /* Update round display, disable buttons, and shows final game result
    when 5 rounds have been played. */
 function handleGameOver(){
