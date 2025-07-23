@@ -157,7 +157,6 @@ showComputerScore.setAttribute("id", "computerScore");
 // Div to show the final result when game ends
 const finalResult = document.createElement("div");
 finalResult.setAttribute("id", "finalResult");
-document.body.appendChild(finalResult);
 
 
 // Append divs to DOM
@@ -167,6 +166,8 @@ document.body.appendChild(computerChoiceDiv);
 document.body.appendChild(resultDiv);
 document.body.appendChild(showPlayerScore);
 document.body.appendChild(showComputerScore);
+document.body.appendChild(finalResult);
+
 
 
 /* Update round display, disable buttons, and shows final game result
