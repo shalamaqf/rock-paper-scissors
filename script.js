@@ -138,6 +138,11 @@ const playerChoiceDiv = document.createElement("div");
 playerChoiceDiv.setAttribute("id", "playerChoice");
 document.body.appendChild(playerChoiceDiv);
 
+/* create a div element to show the computer choice */
+const computerChoiceDiv = document.createElement("div");
+computerChoiceDiv.setAttribute("id", "computerChoice");
+document.body.appendChild(computerChoiceDiv);
+
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
     
