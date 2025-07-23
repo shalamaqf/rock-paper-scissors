@@ -152,6 +152,9 @@ rock.addEventListener('click', () => {
     /* show computer choice */
     computerSelection = getComputerChoice();
     computerChoiceDiv.textContent = "Computer choose: " + computerSelection;
+
+    /* play the game one round */
+    resultDiv.textContent = playRound(computerSelection, humanSelection);
 });
 
 paper.addEventListener('click', () => {
