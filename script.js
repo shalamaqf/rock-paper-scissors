@@ -193,3 +193,4 @@ let roundCount = 1;
 /* create a div element to show the round */
 let showRound = document.createElement("div");
 showRound.setAttribute("id", "round");
+document.body.appendChild(showRound);
