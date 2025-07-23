@@ -219,3 +219,19 @@ document.body.appendChild(showComputerScore);
 const finalResult = document.createElement("div");
 finalResult.setAttribute("id", "finalResult");
 document.body.appendChild(finalResult);
+
+/* create a function to show the round and control the flow of the game */
+function handleGameOver(){
+    if (roundCount == 5){
+        showRound.textContent = "Round: 5 (Last Round)";
+    }
+    else if (roundCount < 5){
+        showRound.textContent = "Round: " + roundCount;
+    }
+    else {
+        finalResult.textContent = compareScore(computerScore, humanScore);
+        rock.disabled = true;
+        paper.disabled = true;
+        scissors.disabled = true;
+    }
+}
