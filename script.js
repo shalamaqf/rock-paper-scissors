@@ -189,3 +189,7 @@ scissors.addEventListener('click', () => {
 
 /* create a variable to keep in track the round */
 let roundCount = 1;
+
+/* create a div element to show the round */
+let showRound = document.createElement("div");
+showRound.setAttribute("id", "round");
