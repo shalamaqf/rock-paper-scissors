@@ -133,6 +133,10 @@ resultDiv.setAttribute("id", "result");
 /* append the div element to the body */
 document.body.appendChild(resultDiv);
 
+/* create a div element to show the player choice */
+const playerChoiceDiv = document.createElement("div");
+playerChoiceDiv.setAttribute("id", "playerChoice");
+
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
     
