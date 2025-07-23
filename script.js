@@ -215,3 +215,7 @@ let showComputerScore = document.createElement("div");
 showComputerScore.setAttribute("id", "computerScore");
 document.body.appendChild(showComputerScore);
 
+/* create a div element to show if the player win or lose */
+const finalResult = document.createElement("div");
+finalResult.setAttribute("id", "finalResult");
+document.body.appendChild(finalResult);
