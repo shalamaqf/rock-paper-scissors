@@ -153,17 +153,20 @@ document.body.appendChild(resultDiv);
 
 /* add event listeners to the button */
 rock.addEventListener('click', () => {
-    
+    playRoundHandler(rock.textContent);
+    handleGameOver();
 });
 
 
 paper.addEventListener('click', () => {
-   
+    playRoundHandler(paper.textContent);
+    handleGameOver();
 });
 
 
 scissors.addEventListener('click', () => {
-   
+    playRoundHandler(scissors.textContent);
+    handleGameOver();
 });
 
 /* create a variable to keep in track the round */
